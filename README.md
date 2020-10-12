@@ -1,16 +1,11 @@
 # Introducción a R
 
 
-<p style='text-align: right;'> Julio César Martínez Sánchez </p>
-<p style='text-align: right;'> jcmartinez@colmex.mx </p>
+<p align="right">  Julio César Martínez Sánchez </p>
+<p align="right">  <a href="mailto:user@example.com">jcmartinez@colmex.mx</a> </p>
 
 
-
-
-
-
-
-##### Presentación
+### Presentación
 
 
 
