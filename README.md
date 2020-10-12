@@ -1,10 +1,11 @@
 # Introducción a R
----
 
 
-Julio César Martínez Sánchez
+<p style='text-align: right;'> Julio César Martínez Sánchez </p>
+<p style='text-align: right;'> jcmartinez@colmex.mx </p>
 
-jcmartinez@colmex.mx
+
+
 
 
 
