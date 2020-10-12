@@ -1,0 +1,65 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# ANÁLISIS CON R
+
+## Introducción
+
+Markdown es un lenguaje de *programación* que sirve para insertar **imágenes**, texto o fórmulas al código que estamos generando. RMarkdown es la implementación que se encuentra disponible en RStudio y permite exportar documentos a formato pdf o html. 
+
+Algunas veces, cuando hacemos una regresión es útil poner alguna ecuación:
+
+$y=\beta_{0} + \beta_{1}x_{1}+\beta_{2}x_{2}+\epsilon$
+
+O bien, querémos hacer referencia a una página: [FLACSO](https://www.flacso.edu.mx/)
+
+
+También es útil incorporar tablas
+
+Sexo | Edad
+---- | -----
+M | 36
+H | 40 
+
+
+
+Podemos incorporar imágenes
+
+*NOTA:* Para ello debemos obtener su **link**
+
+
+![](https://noticias.coches.com/wp-content/uploads/2019/10/Volkswagen-R-logotipo-1.jpg)
+
+
+## Mezclar código de R y texto
+
+Para incorporar texto, se debe indicar `{r }'
+
+```{r eval=TRUE, echo=TRUE, warning=FALSE}
+options(warn=-1)
+library(foreign)                 
+library(questionr)              
+library(ggplot2) 
+library(dplyr) 
+setwd("D:/OneDrive - El Colegio de México A.C/5. Proyectos/2020/30. FLACSO/Introducción a R/Datos")
+encovid<-data.frame(read.dbf("ecovid0420.dbf"))
+```
+
+
+
+Esto es útil para desarrollar nuestro análisis e ir comentando los resultados.
+
+```{r eval=TRUE, echo=TRUE, warning=FALSE}
+class(encovid$PB1)    
+ggplot(encovid,aes(PB1))+geom_bar(fill="blue")
+```
+
+Por ejemplo, en la gráfica anterior se muestra que las mujeres son más que los hombres.
+
+Para usar más funciones, se recomienda: ![Markdown] (https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf)
+
