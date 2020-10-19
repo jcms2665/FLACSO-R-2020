@@ -1,4 +1,4 @@
-# Análisis estadístico con R
+<p align="center" size="60"><b>Análisis estadístico con R</b></p>
 
 
 <p align="right">  Julio César Martínez Sánchez </p>
