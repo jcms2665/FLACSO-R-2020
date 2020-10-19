@@ -162,12 +162,15 @@ prop.table(t2)
     
     #7.4 Categorías
     
-    ei$r_edad <- recode(ei$EDAD.N, "0:22=1; 23:43=2; 44:110=3")      # recode genera los rangos
-    wtd.table(ei$r_edad)
-    wtd.table(ei$r_edad, weights = ei$FACTOR)
+    ei$r_edad[ei$EDAD.N>=0 & ei$EDAD.N<=22] <- 1      
+    ei$r_edad[ei$EDAD.N>=23 & ei$EDAD.N<=43] <- 2
+    ei$r_edad[ei$EDAD.N>=44 & ei$EDAD.N<=110] <- 3
     
-
-
+    wtd.table(ei$r_edad)
+    
+    wtd.table(ei$r_edad, weights = ei$FACTOR)%>%prop.table()
+    
+    
 #8. Subconjuntos de datos con tidyverse 
 
     #8.1 Variables 
@@ -196,6 +199,5 @@ prop.table(t2)
 
 
     ei.mini.4<-filter(ei, PERTE_INDIGENA=="Sí") %>% select(NOM_MUN,NIVACAD)
-
 
 
