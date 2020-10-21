@@ -330,9 +330,5 @@ chisq.test(trab.t)
 # las personas?
 #---------------------------------------------------
 
-trab<-filter(sdemt.1, clase2==1)
 
-trab.t<-wtd.table(trab$seg_soc, trab$sex)
-
-chisq.test(trab.t) 
 
